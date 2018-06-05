@@ -27,6 +27,8 @@ mongoose.connect('mongodb://localhost/lightblog');
 mongoose.set('debug', true);
 
 // Add models
+require('./models/Articles');
+
 // Add routes
 app.use(require('./routes'));
 
