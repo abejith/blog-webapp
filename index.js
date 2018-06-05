@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
+
+const port = process.env.PORT;
 
 testRouter = express.Router();
 
@@ -17,8 +20,8 @@ testRouter.get('/getValueDoubled/:value',function(req,res){
 
 })
 
-app.listen(3000,function(){
-    console.log('server live on 3000');
+app.listen(port,function(){
+    console.log(`server live on ${port} ` );
 })
 
 
