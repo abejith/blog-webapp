@@ -7,7 +7,7 @@ const port = process.env.PORT;
 testRouter = express.Router();
 
 testRouter.use(function(req,res,next){
-    console.log('testRouter use');
+//validations
     next();
 });
 testRouter.get('/getValueDoubled/:value',function(req,res){
